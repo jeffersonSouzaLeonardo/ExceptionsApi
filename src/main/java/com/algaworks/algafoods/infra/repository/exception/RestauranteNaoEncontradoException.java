@@ -1,13 +1,16 @@
 package com.algaworks.algafoods.infra.repository.exception;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.server.ResponseStatusException;
 
-@ResponseStatus(value = HttpStatus.NOT_FOUND)
-public class RestauranteNaoEncontradoException extends Exception {
+public class RestauranteNaoEncontradoException extends ResponseStatusException {
+
+    public RestauranteNaoEncontradoException(HttpStatus status, String reason){
+        super(status, reason);
+    }
 
     public RestauranteNaoEncontradoException(String mensagem){
-        super(mensagem);
+        this(HttpStatus.CONFLICT, mensagem);
     }
 
 }

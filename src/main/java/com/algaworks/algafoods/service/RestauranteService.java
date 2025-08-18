@@ -20,7 +20,7 @@ public class RestauranteService {
         return restauranteRepository.findAll();
     }
 
-    public Restaurante buscarId(Long id) throws RestauranteNaoEncontradoException {
+    public Restaurante buscarId(Long id) {
 
         try {
             return restauranteRepository.findById(id).get();

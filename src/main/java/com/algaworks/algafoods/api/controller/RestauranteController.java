@@ -36,12 +36,7 @@ public class RestauranteController {
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<?> buscarId(@PathVariable("id") Long id) {
-        ResponseEntity<Restaurante> response;
-        try {
-            return ResponseEntity.ok(restauranteService.buscarId(id));
-        } catch (RestauranteNaoEncontradoException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+        return ResponseEntity.ok(restauranteService.buscarId(id));
 
     }
 
