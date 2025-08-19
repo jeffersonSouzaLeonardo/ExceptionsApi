@@ -2,12 +2,15 @@ package com.algaworks.algafoods.api.controller;
 
 
 import com.algaworks.algafoods.domain.model.Restaurante;
+import com.algaworks.algafoods.infra.repository.exception.ErroDto;
+import com.algaworks.algafoods.infra.repository.exception.NegocioException;
 import com.algaworks.algafoods.infra.repository.exception.RestauranteNaoEncontradoException;
 import com.algaworks.algafoods.service.RestauranteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -37,7 +41,6 @@ public class RestauranteController {
     @GetMapping(path = "/{id}")
     public ResponseEntity<?> buscarId(@PathVariable("id") Long id) {
         return ResponseEntity.ok(restauranteService.buscarId(id));
-
     }
 
     @DeleteMapping("/excluir")
@@ -51,5 +54,10 @@ public class RestauranteController {
         return ResponseEntity.ok(restauranteService.salvar(restaurante));
     }
 
+    @ExceptionHandler
+    public ResponseEntity<?> responseException(NegocioException e){
+        ErroDto erro = ErroDto.builder().dataHora(LocalDateTime.now()).mensagem(e.getMessage()).causa(e.getCause().toString()).build();
+        return ResponseEntity.badRequest().body(erro);
+    }
 
 }

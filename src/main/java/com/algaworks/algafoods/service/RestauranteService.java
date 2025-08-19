@@ -2,6 +2,7 @@ package com.algaworks.algafoods.service;
 
 import com.algaworks.algafoods.domain.model.Restaurante;
 import com.algaworks.algafoods.domain.repository.RestauranteRepository;
+import com.algaworks.algafoods.infra.repository.exception.NegocioException;
 import com.algaworks.algafoods.infra.repository.exception.RestauranteNaoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,7 +26,7 @@ public class RestauranteService {
         try {
             return restauranteRepository.findById(id).get();
         } catch (Exception e) {
-            throw new RestauranteNaoEncontradoException(String.format("Restaurante nao encontrado %d", id));
+            throw new NegocioException(String.format("Restaurante nao encontrado: %d " , id), e);
         }
     }
 
