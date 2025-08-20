@@ -1,3 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+# Ignora arquivos gerados pelo SonarLint
+.sonarlint/
+SonarLint.xml
+*.slconfig
