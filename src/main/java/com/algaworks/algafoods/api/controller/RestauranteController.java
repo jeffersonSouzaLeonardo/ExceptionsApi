@@ -54,10 +54,4 @@ public class RestauranteController {
         return ResponseEntity.ok(restauranteService.salvar(restaurante));
     }
 
-    @ExceptionHandler
-    public ResponseEntity<?> responseException(NegocioException e){
-        ErroDto erro = ErroDto.builder().dataHora(LocalDateTime.now()).mensagem(e.getMessage()).causa(e.getCause().toString()).build();
-        return ResponseEntity.badRequest().body(erro);
-    }
-
 }
