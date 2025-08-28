@@ -1,0 +1,11 @@
+
+m
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ñâí¿8œ¤ŸöŒ3
+“
+java:S1128"qRemove this unused import 'com.algaworks.algafoods.infra.repository.exception.RestauranteNaoEncontradoException'.(øµöžùÿÿÿÿ8§¤ŸöŒ3
+b
+java:S1128"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8©¤ŸöŒ3
+o
+java:S1128
+"SRemove this unused import 'org.springframework.web.server.ResponseStatusException'.(¢‡‚
+8ª¤ŸöŒ3

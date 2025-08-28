@@ -3,12 +3,18 @@
 java:S11860"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(é±Ôœıÿÿÿÿ8¹‡Ã£Œ3
 C
 java:S1452*"&Remove usage of generic wildcard type.(…Ò§±8½‡Ã£Œ3
-H
-java:S1452:"&Remove usage of generic wildcard type.(”ß ±şÿÿÿÿ8Á‡Ã£Œ3
+t
+java:S1128"WRemove this unused import 'com.algaworks.algafoods.infra.repository.exception.ErroDto'.(®Ã‹¤8¢ŸöŒ3
+}
+java:S1128"`Remove this unused import 'com.algaworks.algafoods.infra.repository.exception.NegocioException'.(ù©î¹8¢ŸöŒ3
 “
 java:S1128"qRemove this unused import 'com.algaworks.algafoods.infra.repository.exception.RestauranteNaoEncontradoException'.(øµöùÿÿÿÿ8Á‡Ã£Œ3
+r
+java:S1128"URemove this unused import 'org.springframework.web.bind.annotation.ExceptionHandler'.(–Œ•¬8¢ŸöŒ3
 o
 java:S1128"SRemove this unused import 'org.springframework.web.server.ResponseStatusException'.(¢‡‚
 8Á‡Ã£Œ3
+V
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8¢ŸöŒ3
 _
 java:S1128"=Remove this unused import 'java.util.NoSuchElementException'.(®“ÿéúÿÿÿÿ8Á‡Ã£Œ3

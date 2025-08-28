@@ -1,0 +1,11 @@
+padronizacao de msg RFC 7807
+{
+    "status" : "400"
+    "type": "https://algafood.com.br/recurso"
+    "title": "Nao foi possivel excluir a cozinha"
+    "instance": "/cozinha/8/erros/98204983"
+    "timestamp": "2025-01-10T00:36:00"
+    "cozinha": "8"
+}
+
+Obs: em api publica nao mostramos infomacoes como StackTracy, cause etc.

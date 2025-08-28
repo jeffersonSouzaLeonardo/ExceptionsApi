@@ -19,3 +19,7 @@ Osrc/main/java/com/algaworks/algafoods/api/controller/RestauranteController.java
 Vsrc/main/java/com/algaworks/algafoods/infra/repository/exception/NegocioException.java,7/7/7701e16cf8aba0201c01fc928cbcfa2b4b4b8895
 }
 Msrc/main/java/com/algaworks/algafoods/infra/repository/exception/ErroDto.java,f/5/f5630e94131189d73afaecd994123acd9af11e5b
+ˆ
+Xsrc/main/java/com/algaworks/algafoods/infra/repository/exception/ApiExecptionHandle.java,4/c/4ce290456511bd2da1c35201b9447486cf722da4
+7
+HELP.md,1/a/1a273f73b7a477b0745593641bd708a6182c7ad5
